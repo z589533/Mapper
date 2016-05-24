@@ -86,6 +86,12 @@ Country代码：
 
 ##使用Maven
 
+##主键id增加策略 3.3.8版本以后包括
+1.分布式唯一主键id(long)全部数据库通用的@GeneratedValue(generator=\"SFID\")
+2.全部数据库通用的唯一id(String)@GeneratedValue(generator=\"UUID\")"
+3.useGeneratedKeys的@GeneratedValue(generator=\\\"JDBC\\\")  "
+4.类似mysql数据库的@GeneratedValue(strategy=GenerationType.IDENTITY[,generator=\"Mysql\"])");
+
 ###重要提示,3.1.0及以后版本的groupId修改为tk.mybatis，artifactId为mapper
 
 ```xml
