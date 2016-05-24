@@ -126,6 +126,10 @@ public abstract class MapperTemplate {
         return mapperHelper.getConfig().getUUID();
     }
 
+    public String getSnowflakeID() {
+        return mapperHelper.getConfig().getSFID();
+    }
+    
     public String getIDENTITY() {
         return mapperHelper.getConfig().getIDENTITY();
     }

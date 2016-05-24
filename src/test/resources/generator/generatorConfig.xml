@@ -40,7 +40,7 @@
     <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                     connectionURL="jdbc:mysql://localhost:3306/test"
                     userId="root"
-                    password="jj">
+                    password="123456">
     </jdbcConnection>
 
     <javaModelGenerator targetPackage="test.model" targetProject="E:\Git\Mybatis\Mapper\src\test\java"/>

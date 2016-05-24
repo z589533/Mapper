@@ -24,21 +24,21 @@
 
 package tk.mybatis.mapper.mapper;
 
+import java.io.IOException;
+import java.io.Reader;
+import java.sql.Connection;
+
 import org.apache.ibatis.io.Resources;
-import org.apache.ibatis.jdbc.ScriptRunner;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
+
 import tk.mybatis.mapper.common.Mapper;
 import tk.mybatis.mapper.common.MySqlMapper;
 import tk.mybatis.mapper.common.SqlServerMapper;
 import tk.mybatis.mapper.entity.Config;
 import tk.mybatis.mapper.hsqldb.HsqldbMapper;
 import tk.mybatis.mapper.mapperhelper.MapperHelper;
-
-import java.io.IOException;
-import java.io.Reader;
-import java.sql.Connection;
 
 /**
  * Description: MybatisHelper
@@ -94,11 +94,11 @@ public class MybatisHelper {
                 //OK - mapperHelper的任务已经完成，可以不管了
 
                 Connection conn = session.getConnection();
-                reader = Resources.getResourceAsReader("CreateDB.sql");
-                ScriptRunner runner = new ScriptRunner(conn);
-                runner.setLogWriter(null);
-                runner.runScript(reader);
-                reader.close();
+              //  reader = Resources.getResourceAsReader("CreateDB.sql");
+             //   ScriptRunner runner = new ScriptRunner(conn);
+              //  runner.setLogWriter(null);
+               // runner.runScript(reader);
+              //  reader.close();
             } finally {
                 if (session != null) {
                     session.close();

@@ -35,8 +35,8 @@ public class UserInfoAble implements Serializable {
 
     private static final long serialVersionUID = -7703830119762722918L;
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    @GeneratedValue(generator="SFID")
+    private Long id;
     private String username;
     private String password;
     private String usertype;
@@ -45,16 +45,31 @@ public class UserInfoAble implements Serializable {
     private String email;
     private String address;
     private String tel;
+    private Integer enabled;
+    
+    
 
-    public Integer getId() {
-        return id;
-    }
+  
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
+    public Integer getEnabled() {
+		return enabled;
+	}
 
-    public String getUsername() {
+	public void setEnabled(Integer enabled) {
+		this.enabled = enabled;
+	}
+
+
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getUsername() {
         return username;
     }
 

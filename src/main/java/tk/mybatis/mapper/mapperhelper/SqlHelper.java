@@ -112,6 +112,21 @@ public class SqlHelper {
         return sql.toString();
     }
 
+    
+    /**
+     * <bind name="pattern" value="'%' + _parameter.getTitle() + '%'" />
+     *
+     * @param column
+     * @return
+     */
+    public static String getBindValue(EntityColumn column, Long value) {
+        StringBuilder sql = new StringBuilder();
+        sql.append("<bind name=\"");
+        sql.append(column.getProperty()).append("_bind\" ");
+        sql.append("value='").append(value).append("'/>");
+        return sql.toString();
+    }
+    
     /**
      * <bind name="pattern" value="'%' + _parameter.getTitle() + '%'" />
      *
